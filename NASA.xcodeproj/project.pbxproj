@@ -17,7 +17,6 @@
 		FF2F64FF234116C000FBF8C2 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F64FE234116C000FBF8C2 /* ApiService.swift */; };
 		FF2F65042341175F00FBF8C2 /* UrlSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F65032341175F00FBF8C2 /* UrlSessionAdapter.swift */; };
 		FF2F652523412EBB00FBF8C2 /* APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2F651C23412EBB00FBF8C2 /* APOD.framework */; };
-		FF2F652C23412EBB00FBF8C2 /* APODTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F652B23412EBB00FBF8C2 /* APODTests.swift */; };
 		FF2F652E23412EBB00FBF8C2 /* APOD.h in Headers */ = {isa = PBXBuildFile; fileRef = FF2F651E23412EBB00FBF8C2 /* APOD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF2F653123412EBB00FBF8C2 /* APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2F651C23412EBB00FBF8C2 /* APOD.framework */; };
 		FF2F653A23412ED800FBF8C2 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F650B23412D7900FBF8C2 /* Dependencies.swift */; };
@@ -101,7 +100,6 @@
 		FF2F651E23412EBB00FBF8C2 /* APOD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APOD.h; sourceTree = "<group>"; };
 		FF2F651F23412EBB00FBF8C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF2F652423412EBB00FBF8C2 /* APODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APODTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF2F652B23412EBB00FBF8C2 /* APODTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODTests.swift; sourceTree = "<group>"; };
 		FF2F652D23412EBB00FBF8C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,8 +155,7 @@
 				FF05D08B2337F5EF0037C8F8 /* NASA */,
 				FF05D0A22337F5EF0037C8F8 /* NASATests */,
 				FF05D0AD2337F5EF0037C8F8 /* NASAUITests */,
-				FF2F651D23412EBB00FBF8C2 /* APOD */,
-				FF2F652A23412EBB00FBF8C2 /* APODTests */,
+				FF2F655C234135B200FBF8C2 /* Scenes */,
 				FF05D08A2337F5EF0037C8F8 /* Products */,
 				FF2F654223412F7800FBF8C2 /* Frameworks */,
 			);
@@ -261,7 +258,6 @@
 		FF2F652A23412EBB00FBF8C2 /* APODTests */ = {
 			isa = PBXGroup;
 			children = (
-				FF2F652B23412EBB00FBF8C2 /* APODTests.swift */,
 				FF2F652D23412EBB00FBF8C2 /* Info.plist */,
 			);
 			path = APODTests;
@@ -272,6 +268,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF2F655C234135B200FBF8C2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F651D23412EBB00FBF8C2 /* APOD */,
+				FF2F652A23412EBB00FBF8C2 /* APODTests */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,7 +537,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2F652C23412EBB00FBF8C2 /* APODTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,7 +819,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = Scenes/APOD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -842,7 +846,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = APOD/Info.plist;
+				INFOPLIST_FILE = Scenes/APOD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
