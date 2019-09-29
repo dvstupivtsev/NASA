@@ -14,11 +14,14 @@
 		FF05D0962337F5EF0037C8F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF05D0952337F5EF0037C8F8 /* Preview Assets.xcassets */; };
 		FF05D0C12337FFC20037C8F8 /* WindowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05D0C02337FFC20037C8F8 /* WindowRouter.swift */; };
 		FF060D97233FFBFA00890EF3 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF060D96233FFBFA00890EF3 /* RxSwift */; };
-		FF060D99233FFBFA00890EF3 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = FF060D98233FFBFA00890EF3 /* RxTest */; };
 		FF060D9B233FFBFA00890EF3 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FF060D9A233FFBFA00890EF3 /* RxRelay */; };
 		FF060D9D233FFBFA00890EF3 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FF060D9C233FFBFA00890EF3 /* RxCocoa */; };
 		FF060D9F233FFBFA00890EF3 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = FF060D9E233FFBFA00890EF3 /* RxBlocking */; };
 		FF060DA2233FFC2200890EF3 /* RxFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = FF060DA1233FFC2200890EF3 /* RxFeedback */; };
+		FF060DA52340010C00890EF3 /* APODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060DA42340010C00890EF3 /* APODView.swift */; };
+		FF2F64FD2341161D00FBF8C2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F64FC2341161D00FBF8C2 /* Request.swift */; };
+		FF2F64FF234116C000FBF8C2 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F64FE234116C000FBF8C2 /* ApiService.swift */; };
+		FF2F65042341175F00FBF8C2 /* UrlSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F65032341175F00FBF8C2 /* UrlSessionAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		FF05D0AA2337F5EF0037C8F8 /* NASAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NASAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF05D0B02337F5EF0037C8F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF05D0C02337FFC20037C8F8 /* WindowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowRouter.swift; sourceTree = "<group>"; };
+		FF060DA42340010C00890EF3 /* APODView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODView.swift; sourceTree = "<group>"; };
+		FF2F64FC2341161D00FBF8C2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		FF2F64FE234116C000FBF8C2 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		FF2F65032341175F00FBF8C2 /* UrlSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +67,6 @@
 			files = (
 				FF060D9B233FFBFA00890EF3 /* RxRelay in Frameworks */,
 				FF060DA2233FFC2200890EF3 /* RxFeedback in Frameworks */,
-				FF060D99233FFBFA00890EF3 /* RxTest in Frameworks */,
 				FF060D9D233FFBFA00890EF3 /* RxCocoa in Frameworks */,
 				FF060D97233FFBFA00890EF3 /* RxSwift in Frameworks */,
 				FF060D9F233FFBFA00890EF3 /* RxBlocking in Frameworks */,
@@ -107,9 +113,10 @@
 		FF05D08B2337F5EF0037C8F8 /* NASA */ = {
 			isa = PBXGroup;
 			children = (
+				FF2F64FA234115CF00FBF8C2 /* Core */,
+				FF060DA3234000FC00890EF3 /* Scenes */,
 				FF05D0BC2337F7A00037C8F8 /* Assets */,
 				FF05D0BD2337F9420037C8F8 /* Support */,
-				FF05D0902337F5EF0037C8F8 /* ContentView.swift */,
 				FF05D0C02337FFC20037C8F8 /* WindowRouter.swift */,
 			);
 			path = NASA;
@@ -150,6 +157,41 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		FF060DA3234000FC00890EF3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F64F92341158000FBF8C2 /* APOD */,
+				FF05D0902337F5EF0037C8F8 /* ContentView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FF2F64F92341158000FBF8C2 /* APOD */ = {
+			isa = PBXGroup;
+			children = (
+				FF060DA42340010C00890EF3 /* APODView.swift */,
+			);
+			path = APOD;
+			sourceTree = "<group>";
+		};
+		FF2F64FA234115CF00FBF8C2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F64FB234115EC00FBF8C2 /* ApiService */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FF2F64FB234115EC00FBF8C2 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F64FE234116C000FBF8C2 /* ApiService.swift */,
+				FF2F64FC2341161D00FBF8C2 /* Request.swift */,
+				FF2F65032341175F00FBF8C2 /* UrlSessionAdapter.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,7 +210,6 @@
 			name = NASA;
 			packageProductDependencies = (
 				FF060D96233FFBFA00890EF3 /* RxSwift */,
-				FF060D98233FFBFA00890EF3 /* RxTest */,
 				FF060D9A233FFBFA00890EF3 /* RxRelay */,
 				FF060D9C233FFBFA00890EF3 /* RxCocoa */,
 				FF060D9E233FFBFA00890EF3 /* RxBlocking */,
@@ -293,8 +334,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF05D08D2337F5EF0037C8F8 /* AppDelegate.swift in Sources */,
+				FF060DA52340010C00890EF3 /* APODView.swift in Sources */,
+				FF2F64FD2341161D00FBF8C2 /* Request.swift in Sources */,
 				FF05D08F2337F5EF0037C8F8 /* SceneDelegate.swift in Sources */,
 				FF05D0C12337FFC20037C8F8 /* WindowRouter.swift in Sources */,
+				FF2F65042341175F00FBF8C2 /* UrlSessionAdapter.swift in Sources */,
+				FF2F64FF234116C000FBF8C2 /* ApiService.swift in Sources */,
 				FF05D0912337F5EF0037C8F8 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,11 +677,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF060D95233FFBFA00890EF3 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		FF060D98233FFBFA00890EF3 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FF060D95233FFBFA00890EF3 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 		FF060D9A233FFBFA00890EF3 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
