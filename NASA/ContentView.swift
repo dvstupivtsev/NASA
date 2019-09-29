@@ -3,11 +3,12 @@
 //
 
 import SwiftUI
+import APOD
 
-struct ContentView: View {
-    var body: some View {
+struct ContentView: SwiftUI.View {
+    var body: some SwiftUI.View {
         TabView {
-            APODView()
+            APOD.View()
                 .tabItem {
                     Text("Image")
                 }
@@ -17,7 +18,7 @@ struct ContentView: View {
 
 extension ContentView {
     struct Previews: PreviewProvider {
-        static var previews: some View {
+        static var previews: some SwiftUI.View {
             ContentView()
         }
     }
