@@ -10,16 +10,8 @@ struct ContentView: SwiftUI.View {
         TabView {
             APOD.View()
                 .tabItem {
-                    Text("Image")
+                    Text("APOD")
                 }
-        }
-    }
-}
-
-extension ContentView {
-    struct Previews: PreviewProvider {
-        static var previews: some SwiftUI.View {
-            ContentView()
         }
     }
 }

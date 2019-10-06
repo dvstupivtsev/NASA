@@ -5,7 +5,7 @@
 import Foundation
 import RxSwift
 
-typealias RequestExecutor = (_ request: Request) -> Observable<Data?>
+typealias RequestExecutor = (_ request: Request) -> Observable<Data>
 
 enum ApiService {
     private static let _apiKey = "8rtvIryjdio1SlssQ3HtUrCPJdeVeCYel6Jg7LPW"

@@ -4,6 +4,6 @@
 
 import Foundation
 
-enum Event {
-    case load(dates: [Date])
+enum Input {
+    case loadPage
 }

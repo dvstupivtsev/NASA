@@ -6,7 +6,7 @@ import Foundation
 import RxSwift
 import RxFeedback
 
-typealias System = Observable<Output>
+typealias System = Observable<ViewState.Action>
 
 func system(
     input: Observable<Input>,
@@ -15,23 +15,23 @@ func system(
 ) -> System {
     return Observable.system(
         initialState: State(),
-        reduce: Reducer.create(),
+        reduce: { state, action in action(state) },
         scheduler: scheduler,
         feedback: [
-            react(request: { $0 }, effects: { _ -> Observable<Event> in
-                input.map { inputEvent -> Event in
+            react(request: { $0 }, effects: { _ -> Observable<State.Action> in
+                input.flatMap { inputEvent -> Observable<State.Action> in
                     switch inputEvent {
-                    case let .load(dates):
-                        return .load(dates: dates)
+                    case .loadPage:
+                        return State.Actions.loadPage(service: dependencies.apiExecutor)
                     }
                 }
             })
         ]
     ).map {
         if $0.isLoading {
-            return .showLoading
+            return ViewState.Actions.loading()
         } else {
-            return .present(source: $0.dates)
+            return ViewState.Actions.loaded(dates: $0.dates)
         }
     }
 }

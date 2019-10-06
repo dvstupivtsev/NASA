@@ -11,10 +11,8 @@ struct Request {
     let dates: [Date]
 }
 
-enum Service {
-    static func create() -> RequestExecutor {
-        return { _ in
-            .just([])
-        }
+func service() -> RequestExecutor {
+    return { _ in
+        .just(["123", "456"])
     }
 }
