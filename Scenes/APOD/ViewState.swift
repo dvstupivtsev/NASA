@@ -4,12 +4,6 @@
 
 import Foundation
 
-func setup<Type>(_ object: Type, block: (inout Type) -> Void) -> Type {
-    var object = object
-    block(&object)
-    return object
-}
-
 struct ViewState {
     var dates = [Day]()
     var isLoading = false

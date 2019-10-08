@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import Core
 
 extension ViewState {
     typealias Action = (ViewState) -> ViewState

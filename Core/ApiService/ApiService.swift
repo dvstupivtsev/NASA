@@ -5,13 +5,13 @@
 import Foundation
 import RxSwift
 
-typealias RequestExecutor = (_ request: Request) -> Observable<Data>
+public typealias RequestExecutor = (_ request: Request) -> Observable<Data>
 
-enum ApiService {
+public enum ApiService {
     private static let _apiKey = "8rtvIryjdio1SlssQ3HtUrCPJdeVeCYel6Jg7LPW"
     private static let _baseURLString = "https://api.nasa.gov/"
     
-    static func create(urlExecutor: @escaping UrlExecutor) -> RequestExecutor {
+    public static func create(urlExecutor: @escaping UrlExecutor) -> RequestExecutor {
         return {
             let joinedParams = $0.parameters
                 .map { "\($0.key)=\($0.value)" }
