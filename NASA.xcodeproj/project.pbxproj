@@ -16,7 +16,6 @@
 		FF2F652523412EBB00FBF8C2 /* APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2F651C23412EBB00FBF8C2 /* APOD.framework */; };
 		FF2F652E23412EBB00FBF8C2 /* APOD.h in Headers */ = {isa = PBXBuildFile; fileRef = FF2F651E23412EBB00FBF8C2 /* APOD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF2F653123412EBB00FBF8C2 /* APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2F651C23412EBB00FBF8C2 /* APOD.framework */; };
-		FF2F653A23412ED800FBF8C2 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F650B23412D7900FBF8C2 /* Dependencies.swift */; };
 		FF2F653B23412ED800FBF8C2 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F650D23412DA300FBF8C2 /* State.swift */; };
 		FF2F653D23412ED800FBF8C2 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F650923411E0100FBF8C2 /* System.swift */; };
 		FF2F653E23412ED800FBF8C2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F650F23412DD800FBF8C2 /* Service.swift */; };
@@ -25,17 +24,18 @@
 		FF353212234CAF5500FF7204 /* ViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF353210234CAF4400FF7204 /* ViewStateAction.swift */; };
 		FF353221234CB08E00FF7204 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF353218234CB08E00FF7204 /* Core.framework */; };
 		FF353228234CB08E00FF7204 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = FF35321A234CB08E00FF7204 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF353235234CB14500FF7204 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF353234234CB14500FF7204 /* Functions.swift */; };
-		FF353236234CB19600FF7204 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F64FE234116C000FBF8C2 /* ApiService.swift */; };
+		FF353235234CB14500FF7204 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF353234234CB14500FF7204 /* Setup.swift */; };
+		FF353236234CB19600FF7204 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F64FE234116C000FBF8C2 /* RequestExecutor.swift */; };
 		FF353237234CB19A00FF7204 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F64FC2341161D00FBF8C2 /* Request.swift */; };
-		FF353238234CB19E00FF7204 /* UrlSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F65032341175F00FBF8C2 /* UrlSessionAdapter.swift */; };
+		FF353238234CB19E00FF7204 /* UrlExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F65032341175F00FBF8C2 /* UrlExecutor.swift */; };
 		FF35323C234CB22800FF7204 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FF35323B234CB22800FF7204 /* RxCocoa */; };
 		FF353240234CB22800FF7204 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF35323F234CB22800FF7204 /* RxSwift */; };
 		FF353241234CB2A400FF7204 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF353218234CB08E00FF7204 /* Core.framework */; };
 		FF353245234CB2C000FF7204 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = FF353244234CB2C000FF7204 /* RxBlocking */; };
 		FF353247234CB2C000FF7204 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FF353246234CB2C000FF7204 /* RxRelay */; };
 		FF35324B234CB2C000FF7204 /* RxFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = FF35324A234CB2C000FF7204 /* RxFeedback */; };
-		FF9245882349E00500A0DDEB /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9245862349DF2F00A0DDEB /* Actions.swift */; };
+		FF353259234CF50D00FF7204 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF353257234CF4D600FF7204 /* Request.swift */; };
+		FF9245882349E00500A0DDEB /* StateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9245862349DF2F00A0DDEB /* StateActions.swift */; };
 		FF924591234A2D2B00A0DDEB /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92458F234A2CEA00A0DDEB /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,10 +106,9 @@
 		FF05D0C02337FFC20037C8F8 /* WindowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowRouter.swift; sourceTree = "<group>"; };
 		FF060DA42340010C00890EF3 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		FF2F64FC2341161D00FBF8C2 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		FF2F64FE234116C000FBF8C2 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		FF2F65032341175F00FBF8C2 /* UrlSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionAdapter.swift; sourceTree = "<group>"; };
+		FF2F64FE234116C000FBF8C2 /* RequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecutor.swift; sourceTree = "<group>"; };
+		FF2F65032341175F00FBF8C2 /* UrlExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlExecutor.swift; sourceTree = "<group>"; };
 		FF2F650923411E0100FBF8C2 /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
-		FF2F650B23412D7900FBF8C2 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		FF2F650D23412DA300FBF8C2 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		FF2F650F23412DD800FBF8C2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		FF2F651523412E6800FBF8C2 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
@@ -124,8 +123,9 @@
 		FF35321B234CB08E00FF7204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF353220234CB08E00FF7204 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF353227234CB08E00FF7204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF353234234CB14500FF7204 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
-		FF9245862349DF2F00A0DDEB /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		FF353234234CB14500FF7204 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
+		FF353257234CF4D600FF7204 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		FF9245862349DF2F00A0DDEB /* StateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateActions.swift; sourceTree = "<group>"; };
 		FF92458F234A2CEA00A0DDEB /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,24 +265,24 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		FF2F64FB234115EC00FBF8C2 /* ApiService */ = {
+		FF2F64FB234115EC00FBF8C2 /* RequestExecutor */ = {
 			isa = PBXGroup;
 			children = (
-				FF2F64FE234116C000FBF8C2 /* ApiService.swift */,
+				FF2F64FE234116C000FBF8C2 /* RequestExecutor.swift */,
+				FF2F65032341175F00FBF8C2 /* UrlExecutor.swift */,
 				FF2F64FC2341161D00FBF8C2 /* Request.swift */,
-				FF2F65032341175F00FBF8C2 /* UrlSessionAdapter.swift */,
 			);
-			path = ApiService;
+			path = RequestExecutor;
 			sourceTree = "<group>";
 		};
 		FF2F651D23412EBB00FBF8C2 /* APOD */ = {
 			isa = PBXGroup;
 			children = (
+				FF353256234CF49200FF7204 /* Service */,
 				FF9245852349DB7600A0DDEB /* System */,
 				FF060DA42340010C00890EF3 /* View.swift */,
 				FF92458F234A2CEA00A0DDEB /* ViewState.swift */,
 				FF353210234CAF4400FF7204 /* ViewStateAction.swift */,
-				FF2F650F23412DD800FBF8C2 /* Service.swift */,
 				FF2F651E23412EBB00FBF8C2 /* APOD.h */,
 				FF2F651F23412EBB00FBF8C2 /* Info.plist */,
 			);
@@ -316,8 +316,8 @@
 		FF353219234CB08E00FF7204 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FF2F64FB234115EC00FBF8C2 /* ApiService */,
-				FF353234234CB14500FF7204 /* Functions.swift */,
+				FF2F64FB234115EC00FBF8C2 /* RequestExecutor */,
+				FF353234234CB14500FF7204 /* Setup.swift */,
 				FF35321A234CB08E00FF7204 /* Core.h */,
 				FF35321B234CB08E00FF7204 /* Info.plist */,
 			);
@@ -332,14 +332,22 @@
 			path = CoreTests;
 			sourceTree = "<group>";
 		};
+		FF353256234CF49200FF7204 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F650F23412DD800FBF8C2 /* Service.swift */,
+				FF353257234CF4D600FF7204 /* Request.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		FF9245852349DB7600A0DDEB /* System */ = {
 			isa = PBXGroup;
 			children = (
 				FF2F650923411E0100FBF8C2 /* System.swift */,
 				FF2F650D23412DA300FBF8C2 /* State.swift */,
-				FF2F650B23412D7900FBF8C2 /* Dependencies.swift */,
 				FF2F651523412E6800FBF8C2 /* Input.swift */,
-				FF9245862349DF2F00A0DDEB /* Actions.swift */,
+				FF9245862349DF2F00A0DDEB /* StateActions.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -657,12 +665,12 @@
 				FF2F653D23412ED800FBF8C2 /* System.swift in Sources */,
 				FF2F653F23412ED800FBF8C2 /* Input.swift in Sources */,
 				FF353212234CAF5500FF7204 /* ViewStateAction.swift in Sources */,
-				FF2F653A23412ED800FBF8C2 /* Dependencies.swift in Sources */,
 				FF2F654023412ED800FBF8C2 /* View.swift in Sources */,
 				FF2F653E23412ED800FBF8C2 /* Service.swift in Sources */,
 				FF2F653B23412ED800FBF8C2 /* State.swift in Sources */,
 				FF924591234A2D2B00A0DDEB /* ViewState.swift in Sources */,
-				FF9245882349E00500A0DDEB /* Actions.swift in Sources */,
+				FF353259234CF50D00FF7204 /* Request.swift in Sources */,
+				FF9245882349E00500A0DDEB /* StateActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,10 +685,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF353236234CB19600FF7204 /* ApiService.swift in Sources */,
+				FF353236234CB19600FF7204 /* RequestExecutor.swift in Sources */,
 				FF353237234CB19A00FF7204 /* Request.swift in Sources */,
-				FF353238234CB19E00FF7204 /* UrlSessionAdapter.swift in Sources */,
-				FF353235234CB14500FF7204 /* Functions.swift in Sources */,
+				FF353238234CB19E00FF7204 /* UrlExecutor.swift in Sources */,
+				FF353235234CB14500FF7204 /* Setup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

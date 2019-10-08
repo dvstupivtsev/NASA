@@ -14,7 +14,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         let windowScene = scene as? UIWindowScene
-        window = windowScene.map(WindowRouter.createAndShowWindow(scene:))
+        window = windowScene.map(windowRouter(scene:))
     }
 }
 

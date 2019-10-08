@@ -4,12 +4,11 @@
 
 import SwiftUI
 import RxSwift
-import Combine
 
 /// Astronomy Picture of the Day View
 public struct View: SwiftUI.View {
     private let _bag = DisposeBag()
-    private let _input = PublishSubject<Input>()
+    private let _system = system()
     @SwiftUI.State private var _state = ViewState()
     
     public var body: some SwiftUI.View {
@@ -24,16 +23,9 @@ public struct View: SwiftUI.View {
     }
     
     private func _startSystem() {
-        let viewSystem = system(
-            input: _input,
-            dependencies: Dependencies(apiExecutor: service())
-        )
-        
-        viewSystem
+        _system(.loadPage)
             .subscribe(onNext: _updateState(action:))
             .disposed(by: _bag)
-
-        _input.onNext(.loadPage)
     }
     
     private func _updateState(action: ViewState.Action) {

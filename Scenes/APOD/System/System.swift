@@ -6,13 +6,37 @@ import Foundation
 import RxSwift
 import RxFeedback
 
-typealias System = Observable<ViewState.Action>
+typealias Output = ViewState.Action
+typealias System = (Input) -> Observable<Output>
 
 func system(
-    input: Observable<Input>,
-    scheduler: SchedulerType = MainScheduler.instance,
-    dependencies: Dependencies
+    requestExecutor: @escaping Service = service(),
+    scheduler: SchedulerType = MainScheduler.instance
 ) -> System {
+    let input = PublishSubject<Input>()
+    let system = _system(
+        input: input.asObservable(),
+        requestExecutor: requestExecutor,
+        scheduler: scheduler
+    )
+    
+    return { request in
+        Observable.create { observer in
+            let disposable = system.subscribe(observer)
+            input.onNext(request)
+
+            return Disposables.create {
+                disposable.dispose()
+            }
+        }
+    }
+}
+
+private func _system(
+    input: Observable<Input>,
+    requestExecutor: @escaping Service,
+    scheduler: SchedulerType
+) -> Observable<ViewState.Action> {
     return Observable.system(
         initialState: State(),
         reduce: { state, action in action(state) },
@@ -22,7 +46,7 @@ func system(
                 input.flatMap { inputEvent -> Observable<State.Action> in
                     switch inputEvent {
                     case .loadPage:
-                        return State.Actions.loadPage(service: dependencies.apiExecutor)
+                        return State.Actions.loadPage(service: requestExecutor)
                     }
                 }
             })
