@@ -30,6 +30,7 @@
 		FF2F6555234134CD00FBF8C2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FF2F6554234134CD00FBF8C2 /* RxRelay */; };
 		FF2F6557234134CD00FBF8C2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF2F6556234134CD00FBF8C2 /* RxSwift */; };
 		FF2F655B234134CD00FBF8C2 /* RxFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = FF2F655A234134CD00FBF8C2 /* RxFeedback */; };
+		FF353212234CAF5500FF7204 /* ViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF353210234CAF4400FF7204 /* ViewStateAction.swift */; };
 		FF9245882349E00500A0DDEB /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9245862349DF2F00A0DDEB /* Actions.swift */; };
 		FF924591234A2D2B00A0DDEB /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92458F234A2CEA00A0DDEB /* ViewState.swift */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		FF2F651F23412EBB00FBF8C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF2F652423412EBB00FBF8C2 /* APODTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APODTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F652D23412EBB00FBF8C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF353210234CAF4400FF7204 /* ViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateAction.swift; sourceTree = "<group>"; };
 		FF9245862349DF2F00A0DDEB /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		FF92458F234A2CEA00A0DDEB /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,6 +246,7 @@
 				FF9245852349DB7600A0DDEB /* System */,
 				FF060DA42340010C00890EF3 /* View.swift */,
 				FF92458F234A2CEA00A0DDEB /* ViewState.swift */,
+				FF353210234CAF4400FF7204 /* ViewStateAction.swift */,
 				FF2F650F23412DD800FBF8C2 /* Service.swift */,
 				FF2F651E23412EBB00FBF8C2 /* APOD.h */,
 				FF2F651F23412EBB00FBF8C2 /* Info.plist */,
@@ -532,6 +535,7 @@
 			files = (
 				FF2F653D23412ED800FBF8C2 /* System.swift in Sources */,
 				FF2F653F23412ED800FBF8C2 /* Input.swift in Sources */,
+				FF353212234CAF5500FF7204 /* ViewStateAction.swift in Sources */,
 				FF2F653A23412ED800FBF8C2 /* Dependencies.swift in Sources */,
 				FF2F654023412ED800FBF8C2 /* View.swift in Sources */,
 				FF2F653E23412ED800FBF8C2 /* Service.swift in Sources */,
