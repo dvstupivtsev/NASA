@@ -6,30 +6,24 @@ import Foundation
 import RxSwift
 import Core
 
-typealias Service = (Request) -> Observable<[String]>
-
-private let urlString = "planetary/apod"
+typealias Service = (Request) -> Observable<[APOD]>
 
 func service(
     requestExecutor: @escaping Core.RequestExecutor = Core.requestExecutor(),
-    dateFormatter: @escaping (Date) -> String = DateFormatter.YYYYMMDDFormatter.string(from:)
+    dateFormatter: @escaping (Date) -> String = DateFormatter.YYYYMMddFormatter.string(from:),
+    decoder: @escaping (Data) throws -> APOD = decoder()
 ) -> Service {
     return {
         let requests = $0.dates
-            .map { Core.Request(name: urlString, parameters: ["date": dateFormatter($0), "hd": false] ) }
+            .map { Core.Request(name: "planetary/apod", parameters: ["date": dateFormatter($0), "hd": true] ) }
             .map(requestExecutor)
         
         return Observable.from(requests)
             .merge()
-            .map { _ in "success" }
-            .catchErrorJustReturn("failure")
+            .map(decoder)
+            .catchError { _ in .empty() }
             .toArray()
+            .map { $0.sorted { $0.date > $1.date } }
             .asObservable()
-    }
-}
-
-private extension DateFormatter {
-    static let YYYYMMDDFormatter = setup(DateFormatter()) {
-        $0.dateFormat = "YYYY-MM-dd"
     }
 }

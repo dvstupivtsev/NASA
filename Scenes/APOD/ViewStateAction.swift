@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import Prelude
 import Core
 
 extension ViewState {
@@ -15,11 +16,11 @@ extension ViewState {
             }
         }
         
-        static func loaded(dates: [String]) -> Action {
+        static func loaded(dates: [APOD]) -> Action {
             return {
                 setup($0) {
                     $0.isLoading = false
-                    $0.dates = dates.map(Day.init(name:))
+                    $0.dates = dates.compactMap(^\.title).map(Day.init(name:))
                 }
             }
         }

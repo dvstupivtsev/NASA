@@ -1,9 +1,5 @@
 //
-//  APOD.h
-//  APOD
-//
 //  Created by Stupivtsev Dmitriy on 29/09/2019.
-//  Copyright © 2019 dvs. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

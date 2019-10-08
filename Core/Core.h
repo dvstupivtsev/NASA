@@ -1,9 +1,5 @@
 //
-//  Core.h
-//  Core
-//
 //  Created by Stupivtsev Dmitriy on 08.10.2019.
-//  Copyright © 2019 dvs. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

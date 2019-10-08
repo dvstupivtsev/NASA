@@ -11,15 +11,16 @@ extension State {
     enum Actions {
         static func loadPage(service: @escaping Service) -> Observable<Action> {
             let currentDate = Date()
-            let lastDays = Array(0..<20).compactMap {
+            let maxDaysNumber = 20
+            let lastDays = Array(0..<maxDaysNumber).compactMap {
                 Calendar(identifier: .gregorian).date(byAdding: .day, value: -$0, to: currentDate)
             }
             
             return service(Request(dates: lastDays))
-                .map { strings in
+                .map { dates in
                     return { state in
                         var state = state
-                        state.dates = strings
+                        state.dates = dates
                         return state
                     }
                 }
