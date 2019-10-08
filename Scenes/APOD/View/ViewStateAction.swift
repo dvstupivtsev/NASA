@@ -16,11 +16,17 @@ extension ViewState {
             }
         }
         
-        static func loaded(dates: [APOD]) -> Action {
+        static func loaded(dates: [APOD], dateFormatter: DateFormatter = .YYYYMMddFormatter) -> Action {
             return {
                 setup($0) {
                     $0.isLoading = false
-                    $0.dates = dates.compactMap(^\.title).map(Day.init(name:))
+                    $0.dates = dates.map {
+                        ViewState.Day(
+                            title: $0.title,
+                            date: dateFormatter.string(from: $0.date),
+                            imageUrl: $0.imageUrlString ?? $0.highQualityImageUrlString
+                        )
+                    }
                 }
             }
         }

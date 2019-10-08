@@ -13,9 +13,9 @@ public struct View: SwiftUI.View {
     
     public var body: some SwiftUI.View {
         List {
-            Section(footer: Rectangle().foregroundColor(.white).listRowInsets(EdgeInsets())) {
-                ForEach(_state.dates, id: \.name) {
-                    Text($0.name)
+            Section(footer: EmptyView().foregroundColor(.white)) {
+                ForEach(_state.dates, id: \.date) {
+                    Cell($0)
                 }
             }
         }
