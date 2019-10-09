@@ -5,6 +5,7 @@
 import Foundation
 import RxSwift
 import RxFeedback
+import Core
 
 typealias Output = ViewState.Action
 typealias System = (Input) -> Observable<Output>
@@ -42,11 +43,14 @@ private func _system(
         reduce: { state, action in action(state) },
         scheduler: scheduler,
         feedback: [
+            react(request: { $0.isLoading }, effects: {
+                $0 ? State.Actions.loadPage(service: requestExecutor) : .empty()
+            }),
             react(request: { $0 }, effects: { _ -> Observable<State.Action> in
                 input.flatMap { inputEvent -> Observable<State.Action> in
                     switch inputEvent {
                     case .loadPage:
-                        return State.Actions.loadPage(service: requestExecutor)
+                        return .just { setup($0) { $0.isLoading = true } }
                     }
                 }
             })

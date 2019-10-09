@@ -20,13 +20,15 @@ extension ViewState {
             return {
                 setup($0) {
                     $0.isLoading = false
-                    $0.dates = dates.map {
+                    let days = dates.map {
                         ViewState.Day(
                             title: $0.title,
                             date: dateFormatter.string(from: $0.date),
                             imageUrl: $0.imageUrlString ?? $0.highQualityImageUrlString
                         )
                     }
+                    $0.currentDay = days.first
+                    $0.previousDays = Array(days.dropFirst())
                 }
             }
         }

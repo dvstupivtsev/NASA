@@ -37,13 +37,16 @@
 		FF353259234CF50D00FF7204 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF353257234CF4D600FF7204 /* Request.swift */; };
 		FF35325C234D026C00FF7204 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35325A234CFA9400FF7204 /* APOD.swift */; };
 		FF353260234D044C00FF7204 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35325E234D03B700FF7204 /* DateFormatter+Extension.swift */; };
+		FF64A1DA234E49230016E544 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FF64A1D9234E49230016E544 /* Grid */; };
+		FF64A1DD234E53E40016E544 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1DC234E53E40016E544 /* ActivityIndicator.swift */; };
+		FF64A1DE234E54070016E544 /* OptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC508234D24B800C55746 /* OptionalView.swift */; };
 		FF9245882349E00500A0DDEB /* StateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9245862349DF2F00A0DDEB /* StateActions.swift */; };
 		FF924591234A2D2B00A0DDEB /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92458F234A2CEA00A0DDEB /* ViewState.swift */; };
 		FF9BC4FE234D0BA300C55746 /* Prelude in Frameworks */ = {isa = PBXBuildFile; productRef = FF9BC4FD234D0BA300C55746 /* Prelude */; };
 		FF9BC501234D16D500C55746 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC4FF234D16B700C55746 /* Decoder.swift */; };
 		FF9BC506234D1F9800C55746 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FF9BC505234D1F9800C55746 /* URLImage */; };
-		FF9BC50A234D24C800C55746 /* OptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC508234D24B800C55746 /* OptionalView.swift */; };
-		FF9BC50C234D24DA00C55746 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC50B234D24DA00C55746 /* Cell.swift */; };
+		FF9BC50C234D24DA00C55746 /* PreviousDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC50B234D24DA00C55746 /* PreviousDayView.swift */; };
+		FFDF490F234E2E9500D68B4A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF490E234E2E9500D68B4A /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,11 +137,13 @@
 		FF353257234CF4D600FF7204 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		FF35325A234CFA9400FF7204 /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
 		FF35325E234D03B700FF7204 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		FF64A1DC234E53E40016E544 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		FF9245862349DF2F00A0DDEB /* StateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateActions.swift; sourceTree = "<group>"; };
 		FF92458F234A2CEA00A0DDEB /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		FF9BC4FF234D16B700C55746 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		FF9BC508234D24B800C55746 /* OptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalView.swift; sourceTree = "<group>"; };
-		FF9BC50B234D24DA00C55746 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		FF9BC50B234D24DA00C55746 /* PreviousDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousDayView.swift; sourceTree = "<group>"; };
+		FFDF490E234E2E9500D68B4A /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +191,7 @@
 			files = (
 				FF9BC4FE234D0BA300C55746 /* Prelude in Frameworks */,
 				FF35324B234CB2C000FF7204 /* RxFeedback in Frameworks */,
+				FF64A1DA234E49230016E544 /* Grid in Frameworks */,
 				FF35323C234CB22800FF7204 /* RxCocoa in Frameworks */,
 				FF353245234CB2C000FF7204 /* RxBlocking in Frameworks */,
 				FF9BC506234D1F9800C55746 /* URLImage in Frameworks */,
@@ -329,6 +335,8 @@
 		FF353219234CB08E00FF7204 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FF64A1DB234E53D60016E544 /* Views */,
+				FFDF4910234E2E9D00D68B4A /* Extensions */,
 				FF2F64FB234115EC00FBF8C2 /* RequestExecutor */,
 				FF353234234CB14500FF7204 /* Setup.swift */,
 				FF35321A234CB08E00FF7204 /* Core.h */,
@@ -364,6 +372,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FF64A1DB234E53D60016E544 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF64A1DC234E53E40016E544 /* ActivityIndicator.swift */,
+				FF9BC508234D24B800C55746 /* OptionalView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FF9245852349DB7600A0DDEB /* System */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,10 +398,17 @@
 				FF060DA42340010C00890EF3 /* View.swift */,
 				FF92458F234A2CEA00A0DDEB /* ViewState.swift */,
 				FF353210234CAF4400FF7204 /* ViewStateAction.swift */,
-				FF9BC508234D24B800C55746 /* OptionalView.swift */,
-				FF9BC50B234D24DA00C55746 /* Cell.swift */,
+				FF9BC50B234D24DA00C55746 /* PreviousDayView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FFDF4910234E2E9D00D68B4A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF490E234E2E9500D68B4A /* Date+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +551,7 @@
 				FF35324A234CB2C000FF7204 /* RxFeedback */,
 				FF9BC4FD234D0BA300C55746 /* Prelude */,
 				FF9BC505234D1F9800C55746 /* URLImage */,
+				FF64A1D9234E49230016E544 /* Grid */,
 			);
 			productName = Core;
 			productReference = FF353218234CB08E00FF7204 /* Core.framework */;
@@ -601,6 +626,7 @@
 				FF060DA0233FFC2200890EF3 /* XCRemoteSwiftPackageReference "RxFeedback" */,
 				FF9BC4FA234D0B7200C55746 /* XCRemoteSwiftPackageReference "swift-prelude" */,
 				FF9BC502234D1DBA00C55746 /* XCRemoteSwiftPackageReference "url-image" */,
+				FF64A1D6234E490F0016E544 /* XCRemoteSwiftPackageReference "grid" */,
 			);
 			productRefGroup = FF05D08A2337F5EF0037C8F8 /* Products */;
 			projectDirPath = "";
@@ -710,11 +736,10 @@
 				FF2F653B23412ED800FBF8C2 /* State.swift in Sources */,
 				FF924591234A2D2B00A0DDEB /* ViewState.swift in Sources */,
 				FF353259234CF50D00FF7204 /* Request.swift in Sources */,
-				FF9BC50C234D24DA00C55746 /* Cell.swift in Sources */,
+				FF9BC50C234D24DA00C55746 /* PreviousDayView.swift in Sources */,
 				FF353260234D044C00FF7204 /* DateFormatter+Extension.swift in Sources */,
 				FF9BC501234D16D500C55746 /* Decoder.swift in Sources */,
 				FF9245882349E00500A0DDEB /* StateActions.swift in Sources */,
-				FF9BC50A234D24C800C55746 /* OptionalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,9 +754,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF64A1DE234E54070016E544 /* OptionalView.swift in Sources */,
+				FFDF490F234E2E9500D68B4A /* Date+Extension.swift in Sources */,
 				FF353236234CB19600FF7204 /* RequestExecutor.swift in Sources */,
 				FF353237234CB19A00FF7204 /* Request.swift in Sources */,
 				FF353238234CB19E00FF7204 /* UrlExecutor.swift in Sources */,
+				FF64A1DD234E53E40016E544 /* ActivityIndicator.swift in Sources */,
 				FF353235234CB14500FF7204 /* Setup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1309,6 +1337,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		FF64A1D6234E490F0016E544 /* XCRemoteSwiftPackageReference "grid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/grid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.2;
+			};
+		};
 		FF9BC4FA234D0B7200C55746 /* XCRemoteSwiftPackageReference "swift-prelude" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-prelude";
@@ -1352,6 +1388,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF060DA0233FFC2200890EF3 /* XCRemoteSwiftPackageReference "RxFeedback" */;
 			productName = RxFeedback;
+		};
+		FF64A1D9234E49230016E544 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF64A1D6234E490F0016E544 /* XCRemoteSwiftPackageReference "grid" */;
+			productName = Grid;
 		};
 		FF9BC4FD234D0BA300C55746 /* Prelude */ = {
 			isa = XCSwiftPackageProductDependency;

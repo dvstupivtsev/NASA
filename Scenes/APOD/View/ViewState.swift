@@ -5,7 +5,8 @@
 import Foundation
 
 struct ViewState {
-    var dates = [Day]()
+    var currentDay: Day?
+    var previousDays = [Day]()
     var isLoading = false
     
     struct Day {
