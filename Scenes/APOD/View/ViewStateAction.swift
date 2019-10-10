@@ -24,7 +24,7 @@ extension ViewState {
                         ViewState.Day(
                             title: $0.title,
                             date: dateFormatter.string(from: $0.date),
-                            imageUrl: $0.imageUrlString ?? $0.highQualityImageUrlString
+                            imageUrl: $0.highQualityImageUrlString ?? $0.imageUrlString
                         )
                     }
                     $0.currentDay = days.first

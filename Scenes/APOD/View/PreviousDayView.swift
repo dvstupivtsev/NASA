@@ -3,6 +3,7 @@
 //
 
 import SwiftUI
+import RxSwift
 import URLImage
 import Core
 
@@ -19,7 +20,7 @@ struct PreviousDayView: SwiftUI.View {
                         .aspectRatio(contentMode: .fit)
                         .clipped()
                 }
-            }
+            }.or(AnyView(Text("There is no image")))
             VStack(alignment: .leading, spacing: 4) {
                 Text(_state.title).lineLimit(5)
                 Text(_state.date)
