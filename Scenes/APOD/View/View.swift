@@ -44,10 +44,11 @@ public struct View: SwiftUI.View {
         .onAppear(perform: _startSystem)
     }
     
-    private func _collection(style: CollectionStyle) -> AnyView {
+    private func _collection(style: CollectionStyle) -> some SwiftUI.View {
+        let view: AnyView
         switch style {
         case .grid:
-            return AnyView(
+            view = AnyView(
                 Grid(0..<_state.previousDays.count) { index in
                     PreviousDayGridView(self._state.previousDays[index]).onTapGesture {
                         self._pictureToShow = self._state.previousDays[index]
@@ -55,18 +56,21 @@ public struct View: SwiftUI.View {
                     }
                 }.gridStyle(
                     AutoColumnsGridStyle(itemHeight: 250)
-                ).padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+                )
             )
         case .list:
-            return AnyView(
-                List(0..<_state.previousDays.count) { index in
-                    PreviousDayListView(self._state.previousDays[index]).onTapGesture {
-                        self._pictureToShow = self._state.previousDays[index]
-                        self._shouldShowPicture = true
+            view = AnyView(
+                List {
+                    ForEach(self._state.previousDays, id: \.date) { day in
+                        PreviousDayListView(day).onTapGesture {
+                            self._pictureToShow = day
+                            self._shouldShowPicture = true
+                        }
                     }
-                }.padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+                }
             )
         }
+        return view.padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
     }
     
     private func _startSystem() {
