@@ -15,6 +15,7 @@ public struct View: SwiftUI.View {
     @SwiftUI.State private var _state = setup(ViewState()) { $0.isLoading = true }
     @SwiftUI.State private var _pictureToShow: ViewState.Day = .empty
     @SwiftUI.State private var _shouldShowPicture = false
+    @SwiftUI.State private var _collectionStyle: CollectionStyle = .grid
     
     public var body: some SwiftUI.View {
         VStack {
@@ -24,14 +25,13 @@ public struct View: SwiftUI.View {
                 if _state.previousDays.isEmpty {
                     Text("Previous days are not available")
                 } else {
-                    Grid(0..<_state.previousDays.count) { index in
-                        PreviousDayView(self._state.previousDays[index]).onTapGesture {
-                            self._pictureToShow = self._state.previousDays[index]
-                            self._shouldShowPicture = true
-                        }
-                    }.gridStyle(
-                        AutoColumnsGridStyle(itemHeight: 250)
-                    ).padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+                    Picker(selection: $_collectionStyle, label: Text("")) {
+                        Text(CollectionStyle.grid.rawValue).tag(CollectionStyle.grid)
+                        Text(CollectionStyle.list.rawValue).tag(CollectionStyle.list)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
+                    self._collection(style: self._collectionStyle)
                 }
             }
         }
@@ -42,6 +42,31 @@ public struct View: SwiftUI.View {
             PictureView(self._pictureToShow)
         })
         .onAppear(perform: _startSystem)
+    }
+    
+    private func _collection(style: CollectionStyle) -> AnyView {
+        switch style {
+        case .grid:
+            return AnyView(
+                Grid(0..<_state.previousDays.count) { index in
+                    PreviousDayGridView(self._state.previousDays[index]).onTapGesture {
+                        self._pictureToShow = self._state.previousDays[index]
+                        self._shouldShowPicture = true
+                    }
+                }.gridStyle(
+                    AutoColumnsGridStyle(itemHeight: 250)
+                ).padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+            )
+        case .list:
+            return AnyView(
+                List(0..<_state.previousDays.count) { index in
+                    PreviousDayListView(self._state.previousDays[index]).onTapGesture {
+                        self._pictureToShow = self._state.previousDays[index]
+                        self._shouldShowPicture = true
+                    }
+                }.padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+            )
+        }
     }
     
     private func _startSystem() {
@@ -55,4 +80,10 @@ public struct View: SwiftUI.View {
     }
     
     public init() {}
+}
+
+private extension View {
+    enum CollectionStyle: String {
+        case grid = "Grid", list = "List"
+    }
 }

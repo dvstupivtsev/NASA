@@ -7,7 +7,7 @@ import RxSwift
 import URLImage
 import Core
 
-struct PreviousDayView: SwiftUI.View {
+struct PreviousDayGridView: SwiftUI.View {
     private var _state: ViewState.Day = .empty
     
     public var body: some SwiftUI.View {
@@ -34,9 +34,9 @@ struct PreviousDayView: SwiftUI.View {
 }
 
 #if DEBUG
-struct Cell_Previews: PreviewProvider {
+struct PreviousDayGridView_Previews: PreviewProvider {
     static var previews: some SwiftUI.View {
-        PreviousDayView(
+        PreviousDayGridView(
             ViewState.Day(
                 title: "TestMultiliiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiineTitle",
                 date: "2019.10.09",

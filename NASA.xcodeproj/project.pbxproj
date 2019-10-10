@@ -41,12 +41,13 @@
 		FF64A1DD234E53E40016E544 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1DC234E53E40016E544 /* ActivityIndicator.swift */; };
 		FF64A1DE234E54070016E544 /* OptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC508234D24B800C55746 /* OptionalView.swift */; };
 		FF64A1E0234F86700016E544 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1DF234F86700016E544 /* PictureView.swift */; };
+		FF64A1E2234F991A0016E544 /* PreviousDayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1E1234F991A0016E544 /* PreviousDayListView.swift */; };
 		FF9245882349E00500A0DDEB /* StateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9245862349DF2F00A0DDEB /* StateActions.swift */; };
 		FF924591234A2D2B00A0DDEB /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92458F234A2CEA00A0DDEB /* ViewState.swift */; };
 		FF9BC4FE234D0BA300C55746 /* Prelude in Frameworks */ = {isa = PBXBuildFile; productRef = FF9BC4FD234D0BA300C55746 /* Prelude */; };
 		FF9BC501234D16D500C55746 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC4FF234D16B700C55746 /* Decoder.swift */; };
 		FF9BC506234D1F9800C55746 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FF9BC505234D1F9800C55746 /* URLImage */; };
-		FF9BC50C234D24DA00C55746 /* PreviousDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC50B234D24DA00C55746 /* PreviousDayView.swift */; };
+		FF9BC50C234D24DA00C55746 /* PreviousDayGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC50B234D24DA00C55746 /* PreviousDayGridView.swift */; };
 		FFDF490F234E2E9500D68B4A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF490E234E2E9500D68B4A /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,11 +141,12 @@
 		FF35325E234D03B700FF7204 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		FF64A1DC234E53E40016E544 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		FF64A1DF234F86700016E544 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		FF64A1E1234F991A0016E544 /* PreviousDayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousDayListView.swift; sourceTree = "<group>"; };
 		FF9245862349DF2F00A0DDEB /* StateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateActions.swift; sourceTree = "<group>"; };
 		FF92458F234A2CEA00A0DDEB /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		FF9BC4FF234D16B700C55746 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 		FF9BC508234D24B800C55746 /* OptionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalView.swift; sourceTree = "<group>"; };
-		FF9BC50B234D24DA00C55746 /* PreviousDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousDayView.swift; sourceTree = "<group>"; };
+		FF9BC50B234D24DA00C55746 /* PreviousDayGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousDayGridView.swift; sourceTree = "<group>"; };
 		FFDF490E234E2E9500D68B4A /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -401,7 +403,8 @@
 				FF64A1DF234F86700016E544 /* PictureView.swift */,
 				FF92458F234A2CEA00A0DDEB /* ViewState.swift */,
 				FF353210234CAF4400FF7204 /* ViewStateAction.swift */,
-				FF9BC50B234D24DA00C55746 /* PreviousDayView.swift */,
+				FF9BC50B234D24DA00C55746 /* PreviousDayGridView.swift */,
+				FF64A1E1234F991A0016E544 /* PreviousDayListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -734,12 +737,13 @@
 				FF2F653F23412ED800FBF8C2 /* Input.swift in Sources */,
 				FF353212234CAF5500FF7204 /* ViewStateAction.swift in Sources */,
 				FF2F654023412ED800FBF8C2 /* View.swift in Sources */,
+				FF64A1E2234F991A0016E544 /* PreviousDayListView.swift in Sources */,
 				FF35325C234D026C00FF7204 /* APOD.swift in Sources */,
 				FF2F653E23412ED800FBF8C2 /* Service.swift in Sources */,
 				FF2F653B23412ED800FBF8C2 /* State.swift in Sources */,
 				FF924591234A2D2B00A0DDEB /* ViewState.swift in Sources */,
 				FF353259234CF50D00FF7204 /* Request.swift in Sources */,
-				FF9BC50C234D24DA00C55746 /* PreviousDayView.swift in Sources */,
+				FF9BC50C234D24DA00C55746 /* PreviousDayGridView.swift in Sources */,
 				FF353260234D044C00FF7204 /* DateFormatter+Extension.swift in Sources */,
 				FF64A1E0234F86700016E544 /* PictureView.swift in Sources */,
 				FF9BC501234D16D500C55746 /* Decoder.swift in Sources */,
