@@ -19,10 +19,11 @@ struct PreviousDayListView: SwiftUI.View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipped()
+                        .frame(width: 155, height: 155)
+                        .cornerRadius(5)
                 }
             }
             .or(AnyView(Text("There is no image")))
-            .frame(width: 100, height: 100)
             VStack(alignment: .leading, spacing: 4) {
                 Text(_state.title).lineLimit(5)
                 Text(_state.date)

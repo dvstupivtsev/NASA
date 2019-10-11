@@ -11,21 +11,23 @@ struct PreviousDayGridView: SwiftUI.View {
     private var _state: ViewState.Day = .empty
     
     public var body: some SwiftUI.View {
-        VStack(spacing: 8) {
+        VStack(alignment: .leading, spacing: 8) {
             OptionalView(_state.imageUrl.flatMap(URL.init(string:))) {
                 // TODO: replace with another implementation, this one is laggy
                 URLImage($0) {
                     $0.image
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        .aspectRatio(contentMode: .fill)
                         .clipped()
                 }
+                .frame(width: 155, height: 155)
+                .cornerRadius(5)
             }.or(AnyView(Text("There is no image")))
             VStack(alignment: .leading, spacing: 4) {
-                Text(_state.title).lineLimit(5)
-                Text(_state.date)
+                Text(_state.title).lineLimit(5).font(.caption)
+                Text(_state.date).font(.caption)
             }
-        }
+        }.frame(width: 155)
     }
     
     init(_ state: ViewState.Day) {

@@ -15,26 +15,24 @@ public struct View: SwiftUI.View {
     @SwiftUI.State private var _state = setup(ViewState()) { $0.isLoading = true }
     @SwiftUI.State private var _pictureToShow: ViewState.Day = .empty
     @SwiftUI.State private var _shouldShowPicture = false
-    @SwiftUI.State private var _collectionStyle: CollectionStyle = .grid
+    @SwiftUI.State private var _collectionStyle: CollectionStyle = .collection
     
     public var body: some SwiftUI.View {
         VStack {
             if _state.isLoading {
                 ActivityIndicator(style: .large, isAnimating: _state.isLoading)
             } else {
-                if _state.previousDays.isEmpty {
-                    Text("Previous days are not available")
+                VStack {
                     self._currentDayImage()
-                } else {
-                    Picker(selection: $_collectionStyle, label: Text("")) {
-                        Text(CollectionStyle.grid.rawValue).tag(CollectionStyle.grid)
-                        Text(CollectionStyle.list.rawValue).tag(CollectionStyle.list)
+                    
+                    if _state.previousDays.isEmpty {
+                        Text("Previous days are not available")
+                    } else {
+                        self._collection(style: self._collectionStyle)
                     }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .padding(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
-                    self._currentDayImage()
-                    self._collection(style: self._collectionStyle)
                 }
+                .padding(.top, 30)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             }
         }
         .sheet(isPresented: $_shouldShowPicture, onDismiss: {
@@ -51,7 +49,7 @@ public struct View: SwiftUI.View {
             Text("Picture of the day")
                 .font(.title)
                 .fontWeight(.bold)
-                .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+                .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 12))
             OptionalView(_state.currentDay?.imageUrl.flatMap(URL.init(string:))) {
                 URLImage($0) {
                     $0.image
@@ -66,25 +64,27 @@ public struct View: SwiftUI.View {
             }.or(
                 AnyView(
                     Text("There is no image for current day")
-                        .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+                        .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 12))
                 )
             )
-        }.padding(.top, 20)
+        }
     }
     
     private func _collection(style: CollectionStyle) -> some SwiftUI.View {
         let view: AnyView
         switch style {
-        case .grid:
+        case .collection:
             view = AnyView(
-                Grid(0..<_state.previousDays.count) { index in
-                    PreviousDayGridView(self._state.previousDays[index]).onTapGesture {
-                        self._pictureToShow = self._state.previousDays[index]
-                        self._shouldShowPicture = true
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .top, spacing: 8) {
+                        ForEach(self._state.previousDays, id: \.date) { day in
+                            PreviousDayGridView(day).onTapGesture {
+                                self._pictureToShow = day
+                                self._shouldShowPicture = true
+                            }
+                        }
                     }
-                }.gridStyle(
-                    AutoColumnsGridStyle(itemHeight: 250)
-                )
+                }
             )
         case .list:
             view = AnyView(
@@ -101,10 +101,17 @@ public struct View: SwiftUI.View {
         
         return VStack(alignment: .leading, spacing: 8) {
             Text("Previous days")
-                .font(.title)
+                .font(.headline)
                 .fontWeight(.bold)
+            if false {
+                Picker(selection: $_collectionStyle, label: Text("")) {
+                    Text(CollectionStyle.collection.rawValue).tag(CollectionStyle.collection)
+                    Text(CollectionStyle.list.rawValue).tag(CollectionStyle.list)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
             view
-        }.padding(EdgeInsets(top: 20, leading: 8, bottom: 0, trailing: 8))
+        }.padding(EdgeInsets(top: 20, leading: 12, bottom: 0, trailing: 12))
     }
     
     private func _startSystem() {
@@ -122,6 +129,6 @@ public struct View: SwiftUI.View {
 
 private extension View {
     enum CollectionStyle: String {
-        case grid = "Grid", list = "List"
+        case collection = "Collection", list = "List"
     }
 }
