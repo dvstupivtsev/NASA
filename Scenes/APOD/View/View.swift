@@ -24,6 +24,7 @@ public struct View: SwiftUI.View {
             } else {
                 if _state.previousDays.isEmpty {
                     Text("Previous days are not available")
+                    self._currentDayImage()
                 } else {
                     Picker(selection: $_collectionStyle, label: Text("")) {
                         Text(CollectionStyle.grid.rawValue).tag(CollectionStyle.grid)
@@ -31,6 +32,7 @@ public struct View: SwiftUI.View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding(EdgeInsets(top: 8, leading: 12, bottom: 8, trailing: 12))
+                    self._currentDayImage()
                     self._collection(style: self._collectionStyle)
                 }
             }
@@ -42,6 +44,32 @@ public struct View: SwiftUI.View {
             PictureView(self._pictureToShow)
         })
         .onAppear(perform: _startSystem)
+    }
+    
+    private func _currentDayImage() -> some SwiftUI.View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Picture of the day")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+            OptionalView(_state.currentDay?.imageUrl.flatMap(URL.init(string:))) {
+                URLImage($0) {
+                    $0.image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipped()
+                }.onTapGesture {
+                    guard let day = self._state.currentDay else { return }
+                    self._pictureToShow = day
+                    self._shouldShowPicture = true
+                }
+            }.or(
+                AnyView(
+                    Text("There is no image for current day")
+                        .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+                )
+            )
+        }.padding(.top, 20)
     }
     
     private func _collection(style: CollectionStyle) -> some SwiftUI.View {
@@ -70,7 +98,13 @@ public struct View: SwiftUI.View {
                 }
             )
         }
-        return view.padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+        
+        return VStack(alignment: .leading, spacing: 8) {
+            Text("Previous days")
+                .font(.title)
+                .fontWeight(.bold)
+            view
+        }.padding(EdgeInsets(top: 20, leading: 8, bottom: 0, trailing: 8))
     }
     
     private func _startSystem() {
