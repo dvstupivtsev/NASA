@@ -13,7 +13,6 @@
 		FF05D0932337F5EF0037C8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF05D0922337F5EF0037C8F8 /* Assets.xcassets */; };
 		FF05D0962337F5EF0037C8F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF05D0952337F5EF0037C8F8 /* Preview Assets.xcassets */; };
 		FF05D0C12337FFC20037C8F8 /* WindowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05D0C02337FFC20037C8F8 /* WindowRouter.swift */; };
-		FF2F652523412EBB00FBF8C2 /* APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2F651C23412EBB00FBF8C2 /* APOD.framework */; };
 		FF2F652E23412EBB00FBF8C2 /* APOD.h in Headers */ = {isa = PBXBuildFile; fileRef = FF2F651E23412EBB00FBF8C2 /* APOD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF2F653123412EBB00FBF8C2 /* APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2F651C23412EBB00FBF8C2 /* APOD.framework */; };
 		FF2F653B23412ED800FBF8C2 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F650D23412DA300FBF8C2 /* State.swift */; };
@@ -22,7 +21,7 @@
 		FF2F653F23412ED800FBF8C2 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F651523412E6800FBF8C2 /* Input.swift */; };
 		FF2F654023412ED800FBF8C2 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF060DA42340010C00890EF3 /* View.swift */; };
 		FF353212234CAF5500FF7204 /* ViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF353210234CAF4400FF7204 /* ViewStateAction.swift */; };
-		FF353221234CB08E00FF7204 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF353218234CB08E00FF7204 /* Core.framework */; };
+		FF353221234CB08E00FF7204 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF353218234CB08E00FF7204 /* Core.framework */; platformFilter = ios; };
 		FF353228234CB08E00FF7204 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = FF35321A234CB08E00FF7204 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF353235234CB14500FF7204 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF353234234CB14500FF7204 /* Setup.swift */; };
 		FF353236234CB19600FF7204 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F64FE234116C000FBF8C2 /* RequestExecutor.swift */; };
@@ -30,18 +29,21 @@
 		FF353238234CB19E00FF7204 /* UrlExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F65032341175F00FBF8C2 /* UrlExecutor.swift */; };
 		FF35323C234CB22800FF7204 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FF35323B234CB22800FF7204 /* RxCocoa */; };
 		FF353240234CB22800FF7204 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF35323F234CB22800FF7204 /* RxSwift */; };
-		FF353241234CB2A400FF7204 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF353218234CB08E00FF7204 /* Core.framework */; };
+		FF353241234CB2A400FF7204 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF353218234CB08E00FF7204 /* Core.framework */; platformFilter = ios; };
 		FF353245234CB2C000FF7204 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = FF353244234CB2C000FF7204 /* RxBlocking */; };
 		FF353247234CB2C000FF7204 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FF353246234CB2C000FF7204 /* RxRelay */; };
 		FF35324B234CB2C000FF7204 /* RxFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = FF35324A234CB2C000FF7204 /* RxFeedback */; };
 		FF353259234CF50D00FF7204 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF353257234CF4D600FF7204 /* Request.swift */; };
-		FF35325C234D026C00FF7204 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35325A234CFA9400FF7204 /* APOD.swift */; };
+		FF35325C234D026C00FF7204 /* APODModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35325A234CFA9400FF7204 /* APODModel.swift */; };
 		FF353260234D044C00FF7204 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35325E234D03B700FF7204 /* DateFormatter+Extension.swift */; };
 		FF64A1DA234E49230016E544 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FF64A1D9234E49230016E544 /* Grid */; };
 		FF64A1DD234E53E40016E544 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1DC234E53E40016E544 /* ActivityIndicator.swift */; };
 		FF64A1DE234E54070016E544 /* OptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9BC508234D24B800C55746 /* OptionalView.swift */; };
 		FF64A1E0234F86700016E544 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1DF234F86700016E544 /* PictureView.swift */; };
 		FF64A1E2234F991A0016E544 /* PreviousDayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1E1234F991A0016E544 /* PreviousDayListView.swift */; };
+		FF64A1E523535A8B0016E544 /* ViewStateActionsLoadedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1E423535A8B0016E544 /* ViewStateActionsLoadedTests.swift */; };
+		FF886FCE2353689C00DFB719 /* DecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF886FCD2353689C00DFB719 /* DecoderTests.swift */; };
+		FF886FE32353830100DFB719 /* APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2F651C23412EBB00FBF8C2 /* APOD.framework */; };
 		FF9245882349E00500A0DDEB /* StateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9245862349DF2F00A0DDEB /* StateActions.swift */; };
 		FF924591234A2D2B00A0DDEB /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92458F234A2CEA00A0DDEB /* ViewState.swift */; };
 		FF9BC4FE234D0BA300C55746 /* Prelude in Frameworks */ = {isa = PBXBuildFile; productRef = FF9BC4FD234D0BA300C55746 /* Prelude */; };
@@ -72,13 +74,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FF2F651B23412EBB00FBF8C2;
 			remoteInfo = APOD;
-		};
-		FF2F652823412EBB00FBF8C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF05D0812337F5EF0037C8F8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FF05D0882337F5EF0037C8F8;
-			remoteInfo = NASA;
 		};
 		FF2F652F23412EBB00FBF8C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -137,11 +132,13 @@
 		FF353227234CB08E00FF7204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF353234234CB14500FF7204 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
 		FF353257234CF4D600FF7204 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		FF35325A234CFA9400FF7204 /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
+		FF35325A234CFA9400FF7204 /* APODModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODModel.swift; sourceTree = "<group>"; };
 		FF35325E234D03B700FF7204 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		FF64A1DC234E53E40016E544 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		FF64A1DF234F86700016E544 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		FF64A1E1234F991A0016E544 /* PreviousDayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousDayListView.swift; sourceTree = "<group>"; };
+		FF64A1E423535A8B0016E544 /* ViewStateActionsLoadedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateActionsLoadedTests.swift; sourceTree = "<group>"; };
+		FF886FCD2353689C00DFB719 /* DecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTests.swift; sourceTree = "<group>"; };
 		FF9245862349DF2F00A0DDEB /* StateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateActions.swift; sourceTree = "<group>"; };
 		FF92458F234A2CEA00A0DDEB /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		FF9BC4FF234D16B700C55746 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
@@ -185,7 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2F652523412EBB00FBF8C2 /* APOD.framework in Frameworks */,
+				FF886FE32353830100DFB719 /* APOD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +312,9 @@
 		FF2F652A23412EBB00FBF8C2 /* APODTests */ = {
 			isa = PBXGroup;
 			children = (
+				FF886FCF23536C1F00DFB719 /* System */,
+				FF886FCC2353688D00DFB719 /* Service */,
+				FF64A1E323535A740016E544 /* View */,
 				FF2F652D23412EBB00FBF8C2 /* Info.plist */,
 			);
 			path = APODTests;
@@ -363,7 +363,7 @@
 				FF2F650F23412DD800FBF8C2 /* Service.swift */,
 				FF9BC4FF234D16B700C55746 /* Decoder.swift */,
 				FF353257234CF4D600FF7204 /* Request.swift */,
-				FF35325A234CFA9400FF7204 /* APOD.swift */,
+				FF35325A234CFA9400FF7204 /* APODModel.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -383,6 +383,22 @@
 				FF9BC508234D24B800C55746 /* OptionalView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FF64A1E323535A740016E544 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF64A1E423535A8B0016E544 /* ViewStateActionsLoadedTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF886FCC2353688D00DFB719 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FF886FCD2353689C00DFB719 /* DecoderTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		FF9245852349DB7600A0DDEB /* System */ = {
@@ -528,7 +544,6 @@
 			);
 			dependencies = (
 				FF2F652723412EBB00FBF8C2 /* PBXTargetDependency */,
-				FF2F652923412EBB00FBF8C2 /* PBXTargetDependency */,
 			);
 			name = APODTests;
 			productName = APODTests;
@@ -607,6 +622,7 @@
 					};
 					FF2F652323412EBB00FBF8C2 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 						TestTargetID = FF05D0882337F5EF0037C8F8;
 					};
 					FF353217234CB08E00FF7204 = {
@@ -738,7 +754,7 @@
 				FF353212234CAF5500FF7204 /* ViewStateAction.swift in Sources */,
 				FF2F654023412ED800FBF8C2 /* View.swift in Sources */,
 				FF64A1E2234F991A0016E544 /* PreviousDayListView.swift in Sources */,
-				FF35325C234D026C00FF7204 /* APOD.swift in Sources */,
+				FF35325C234D026C00FF7204 /* APODModel.swift in Sources */,
 				FF2F653E23412ED800FBF8C2 /* Service.swift in Sources */,
 				FF2F653B23412ED800FBF8C2 /* State.swift in Sources */,
 				FF924591234A2D2B00A0DDEB /* ViewState.swift in Sources */,
@@ -755,6 +771,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF886FCE2353689C00DFB719 /* DecoderTests.swift in Sources */,
+				FF64A1E523535A8B0016E544 /* ViewStateActionsLoadedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,13 +812,9 @@
 		};
 		FF2F652723412EBB00FBF8C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = FF2F651B23412EBB00FBF8C2 /* APOD */;
 			targetProxy = FF2F652623412EBB00FBF8C2 /* PBXContainerItemProxy */;
-		};
-		FF2F652923412EBB00FBF8C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FF05D0882337F5EF0037C8F8 /* NASA */;
-			targetProxy = FF2F652823412EBB00FBF8C2 /* PBXContainerItemProxy */;
 		};
 		FF2F653023412EBB00FBF8C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -809,11 +823,13 @@
 		};
 		FF353223234CB08E00FF7204 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = FF353217234CB08E00FF7204 /* Core */;
 			targetProxy = FF353222234CB08E00FF7204 /* PBXContainerItemProxy */;
 		};
 		FF353232234CB0C900FF7204 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = FF353217234CB08E00FF7204 /* Core */;
 			targetProxy = FF353231234CB0C900FF7204 /* PBXContainerItemProxy */;
 		};
@@ -1116,9 +1132,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TA68U55HHH;
-				INFOPLIST_FILE = APODTests/Info.plist;
+				INFOPLIST_FILE = Scenes/APODTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1126,6 +1143,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dvs.APODTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NASA.app/NASA";
@@ -1136,9 +1154,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TA68U55HHH;
-				INFOPLIST_FILE = APODTests/Info.plist;
+				INFOPLIST_FILE = Scenes/APODTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,8 +10,10 @@ extension State {
     typealias Action = (State) -> State
 
     enum Actions {
-        static func loadPage(service: @escaping Service) -> Observable<Action> {
-            let currentDate = Date() + .hour(-12)
+        static func loadPage(
+            service: @escaping Service,
+            currentDate: Date = Date() + .hour(-12)
+        ) -> Observable<Action> {
             let maxDaysNumber = 20
             let lastDays = Array(0..<maxDaysNumber).compactMap {
                 Calendar(identifier: .gregorian).date(byAdding: .day, value: -$0, to: currentDate)
@@ -19,11 +21,11 @@ extension State {
             
             return service(Request(dates: lastDays))
                 .map { dates in
-                    return { state in
-                        var state = state
-                        state.isLoading = false
-                        state.dates = dates
-                        return state
+                    return {
+                        setup($0) {
+                            $0.isLoading = false
+                            $0.dates = dates
+                        }
                     }
                 }
         }

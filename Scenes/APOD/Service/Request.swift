@@ -4,6 +4,6 @@
 
 import Foundation
 
-struct Request {
+struct Request: Equatable {
     let dates: [Date]
 }

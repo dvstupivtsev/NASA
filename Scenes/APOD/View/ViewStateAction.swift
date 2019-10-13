@@ -16,14 +16,17 @@ extension ViewState {
             }
         }
         
-        static func loaded(dates: [APOD], dateFormatter: DateFormatter = .YYYYMMddFormatter) -> Action {
+        static func loaded(
+            dates: [APODModel],
+            dateFormatter: @escaping (Date) -> String = DateFormatter.YYYYMMddFormatter.string(from:)
+        ) -> Action {
             return {
                 setup($0) {
                     $0.isLoading = false
                     let days = dates.map {
                         ViewState.Day(
                             title: $0.title,
-                            date: dateFormatter.string(from: $0.date),
+                            date: dateFormatter($0.date),
                             imageUrl: $0.highQualityImageUrlString ?? $0.imageUrlString
                         )
                     }

@@ -4,10 +4,10 @@
 
 import Foundation
 
-func decoder() -> (Data) throws -> APOD {
+func decoder() -> (Data) throws -> APODModel {
     return {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(.YYYYMMddFormatter)
-        return try decoder.decode(APOD.self, from: $0)
+        return try decoder.decode(APODModel.self, from: $0)
     }
 }

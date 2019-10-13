@@ -6,12 +6,12 @@ import Foundation
 import RxSwift
 import Core
 
-typealias Service = (Request) -> Observable<[APOD]>
+typealias Service = (Request) -> Observable<[APODModel]>
 
 func service(
     requestExecutor: @escaping Core.RequestExecutor = Core.requestExecutor(),
     dateFormatter: @escaping (Date) -> String = DateFormatter.YYYYMMddFormatter.string(from:),
-    decoder: @escaping (Data) throws -> APOD = decoder()
+    decoder: @escaping (Data) throws -> APODModel = decoder()
 ) -> Service {
     return {
         let requests = $0.dates

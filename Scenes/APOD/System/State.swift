@@ -5,6 +5,6 @@
 import Foundation
 
 struct State: Equatable {
-    var dates = [APOD]()
+    var dates = [APODModel]()
     var isLoading = false
 }

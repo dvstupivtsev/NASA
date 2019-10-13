@@ -4,12 +4,12 @@
 
 import Foundation
 
-struct ViewState {
+struct ViewState: Equatable {
     var currentDay: Day?
     var previousDays = [Day]()
     var isLoading = false
     
-    struct Day {
+    struct Day: Equatable {
         let title: String
         let date: String
         let imageUrl: String?
