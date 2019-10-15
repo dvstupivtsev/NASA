@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-NASA/Pods-NASA-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Prelude/Prelude.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxFeedback/RxFeedback.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

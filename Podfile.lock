@@ -1,0 +1,46 @@
+PODS:
+  - Prelude (3.0.0)
+  - RxBlocking (5.0.0):
+    - RxSwift (~> 5)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxFeedback (3.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - RxTest (5.0.0):
+    - RxSwift (~> 5)
+
+DEPENDENCIES:
+  - Prelude
+  - RxBlocking
+  - RxCocoa
+  - RxFeedback
+  - RxSwift
+  - RxTest
+
+SPEC REPOS:
+  trunk:
+    - Prelude
+    - RxBlocking
+    - RxCocoa
+    - RxFeedback
+    - RxRelay
+    - RxSwift
+    - RxTest
+
+SPEC CHECKSUMS:
+  Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
+  RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
+
+PODFILE CHECKSUM: 0df647d8ceae39233b8497ac89cddaab569f87fe
+
+COCOAPODS: 1.8.3
