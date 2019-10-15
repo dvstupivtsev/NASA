@@ -43,6 +43,7 @@
 		FF64A1E2234F991A0016E544 /* PreviousDayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1E1234F991A0016E544 /* PreviousDayListView.swift */; };
 		FF64A1E523535A8B0016E544 /* ViewStateActionsLoadedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64A1E423535A8B0016E544 /* ViewStateActionsLoadedTests.swift */; };
 		FF6EF80B2356412600AD2D7F /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = FF6EF80A2356412600AD2D7F /* URLImage */; };
+		FF6EF810235643E700AD2D7F /* StateActionLoadPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6EF80F235643E700AD2D7F /* StateActionLoadPageTests.swift */; };
 		FF886FCE2353689C00DFB719 /* DecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF886FCD2353689C00DFB719 /* DecoderTests.swift */; };
 		FF886FE32353830100DFB719 /* APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2F651C23412EBB00FBF8C2 /* APOD.framework */; };
 		FF9245882349E00500A0DDEB /* StateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9245862349DF2F00A0DDEB /* StateActions.swift */; };
@@ -155,6 +156,7 @@
 		FF64A1DF234F86700016E544 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 		FF64A1E1234F991A0016E544 /* PreviousDayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousDayListView.swift; sourceTree = "<group>"; };
 		FF64A1E423535A8B0016E544 /* ViewStateActionsLoadedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateActionsLoadedTests.swift; sourceTree = "<group>"; };
+		FF6EF80F235643E700AD2D7F /* StateActionLoadPageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateActionLoadPageTests.swift; sourceTree = "<group>"; };
 		FF886FCD2353689C00DFB719 /* DecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderTests.swift; sourceTree = "<group>"; };
 		FF9245862349DF2F00A0DDEB /* StateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateActions.swift; sourceTree = "<group>"; };
 		FF92458F234A2CEA00A0DDEB /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 		FF2F652A23412EBB00FBF8C2 /* APODTests */ = {
 			isa = PBXGroup;
 			children = (
+				FF6EF80C235643AD00AD2D7F /* System */,
 				FF886FCC2353688D00DFB719 /* Service */,
 				FF64A1E323535A740016E544 /* View */,
 				FF2F652D23412EBB00FBF8C2 /* Info.plist */,
@@ -432,6 +435,14 @@
 				FF64A1E423535A8B0016E544 /* ViewStateActionsLoadedTests.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FF6EF80C235643AD00AD2D7F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				FF6EF80F235643E700AD2D7F /* StateActionLoadPageTests.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 		FF886FCC2353688D00DFB719 /* Service */ = {
@@ -1010,6 +1021,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6EF810235643E700AD2D7F /* StateActionLoadPageTests.swift in Sources */,
 				FF886FCE2353689C00DFB719 /* DecoderTests.swift in Sources */,
 				FF64A1E523535A8B0016E544 /* ViewStateActionsLoadedTests.swift in Sources */,
 			);
