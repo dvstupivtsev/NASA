@@ -22,7 +22,7 @@ target 'NASA' do
     core_pods
   
     target 'NASATests' do
-      inherit! :search_paths
+      core_pods
       test_pods
     end
   end
@@ -32,7 +32,7 @@ target 'APOD' do
   core_pods
 
   target 'APODTests' do
-    inherit! :search_paths
+    core_pods
     test_pods
   end
 end
@@ -42,7 +42,7 @@ target 'Core' do
   core_pods
 
   target 'CoreTests' do
-    inherit! :search_paths
+    core_pods
     test_pods
   end
 end

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		751C87066064FD2B77714F55 /* Pods_APODTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5D25A064C37BC0B46B8F83 /* Pods_APODTests.framework */; };
+		30238DD13C5B4878A2C0FB89 /* Pods_Core_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BD4873C384BF9AC775CBEA /* Pods_Core_CoreTests.framework */; };
 		7807995036081FD6FD54475E /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732E7E8B040428438EB05B82 /* Pods_Core.framework */; };
 		B3BB006EC0A0ADB69C2EC178 /* Pods_NASA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09845BF909738A30A0FA1E54 /* Pods_NASA.framework */; };
-		BF5A0BAC127AB61F6444E87A /* Pods_NASATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972EEAAE159A7AD17EE30D60 /* Pods_NASATests.framework */; };
-		EA0D10475353F3E80E95088C /* Pods_CoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15C4D6B5B53918B9B9C0906 /* Pods_CoreTests.framework */; };
 		F4F596CD997D93861323FD88 /* Pods_APOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA64CE8E7F84A75FB5484A5 /* Pods_APOD.framework */; };
+		F9027154D53AFFAB0D68BB27 /* Pods_NASA_NASATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966D47A0817226E636BDB0AA /* Pods_NASA_NASATests.framework */; };
+		FA2ECD2AA7DDF520B5E47374 /* Pods_APOD_APODTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55E41E57F1804866A7E104DC /* Pods_APOD_APODTests.framework */; };
 		FF05D08D2337F5EF0037C8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05D08C2337F5EF0037C8F8 /* AppDelegate.swift */; };
 		FF05D08F2337F5EF0037C8F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05D08E2337F5EF0037C8F8 /* SceneDelegate.swift */; };
 		FF05D0912337F5EF0037C8F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05D0902337F5EF0037C8F8 /* ContentView.swift */; };
@@ -100,22 +100,28 @@
 
 /* Begin PBXFileReference section */
 		09845BF909738A30A0FA1E54 /* Pods_NASA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NASA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E5D25A064C37BC0B46B8F83 /* Pods_APODTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APODTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21917B0510B46BF24AB377B5 /* Pods-CoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTests.debug.xcconfig"; path = "Target Support Files/Pods-CoreTests/Pods-CoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		24DB8D18AFC564E999A08E4B /* Pods-APOD-APODTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APOD-APODTests.debug.xcconfig"; path = "Target Support Files/Pods-APOD-APODTests/Pods-APOD-APODTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B33224A079701452E9CC3FA /* Pods-APODTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APODTests.release.xcconfig"; path = "Target Support Files/Pods-APODTests/Pods-APODTests.release.xcconfig"; sourceTree = "<group>"; };
 		3EA64CE8E7F84A75FB5484A5 /* Pods_APOD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APOD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA8A6FB7A0CBDE5F22F729A /* Pods-NASATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASATests.debug.xcconfig"; path = "Target Support Files/Pods-NASATests/Pods-NASATests.debug.xcconfig"; sourceTree = "<group>"; };
+		4CA686150AA4334C9A66B7A6 /* Pods-NASA-NASATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA-NASATests.release.xcconfig"; path = "Target Support Files/Pods-NASA-NASATests/Pods-NASA-NASATests.release.xcconfig"; sourceTree = "<group>"; };
 		502949EB358CE9EDFEE4546A /* Pods-NASA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA.debug.xcconfig"; path = "Target Support Files/Pods-NASA/Pods-NASA.debug.xcconfig"; sourceTree = "<group>"; };
 		55C44328BA25D205770FEA05 /* Pods-CoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreTests.release.xcconfig"; path = "Target Support Files/Pods-CoreTests/Pods-CoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		55E41E57F1804866A7E104DC /* Pods_APOD_APODTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APOD_APODTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		732E7E8B040428438EB05B82 /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7B52271D879B014526B2A6 /* Pods-APODTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APODTests.debug.xcconfig"; path = "Target Support Files/Pods-APODTests/Pods-APODTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E12B9A5AC1237D800B6E59B /* Pods-NASA-NASATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA-NASATests.debug.xcconfig"; path = "Target Support Files/Pods-NASA-NASATests/Pods-NASA-NASATests.debug.xcconfig"; sourceTree = "<group>"; };
 		92BFE48586858315989FBB47 /* Pods-APOD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APOD.debug.xcconfig"; path = "Target Support Files/Pods-APOD/Pods-APOD.debug.xcconfig"; sourceTree = "<group>"; };
-		972EEAAE159A7AD17EE30D60 /* Pods_NASATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NASATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		966D47A0817226E636BDB0AA /* Pods_NASA_NASATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NASA_NASATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3BD4873C384BF9AC775CBEA /* Pods_Core_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFEDA0BF193B9FAC6A3709F /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
 		C77FA45D180EEAAAD8676B86 /* Pods-NASA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASA.release.xcconfig"; path = "Target Support Files/Pods-NASA/Pods-NASA.release.xcconfig"; sourceTree = "<group>"; };
+		CA12B8A90DDEA0EF681B506B /* Pods-Core-CoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core-CoreTests.release.xcconfig"; path = "Target Support Files/Pods-Core-CoreTests/Pods-Core-CoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		D43AF863521E0D4C8CEED3AD /* Pods-Core-CoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core-CoreTests.debug.xcconfig"; path = "Target Support Files/Pods-Core-CoreTests/Pods-Core-CoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D688E91D55375E5F38605AF1 /* Pods-APOD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APOD.release.xcconfig"; path = "Target Support Files/Pods-APOD/Pods-APOD.release.xcconfig"; sourceTree = "<group>"; };
 		D88CA120661789CB9BBCB20B /* Pods-NASATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NASATests.release.xcconfig"; path = "Target Support Files/Pods-NASATests/Pods-NASATests.release.xcconfig"; sourceTree = "<group>"; };
-		F15C4D6B5B53918B9B9C0906 /* Pods_CoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE5CDBFB30A6DDA69F1BC8D2 /* Pods-APOD-APODTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APOD-APODTests.release.xcconfig"; path = "Target Support Files/Pods-APOD-APODTests/Pods-APOD-APODTests.release.xcconfig"; sourceTree = "<group>"; };
 		F42D80237F7D28AB1ABDA19E /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 		FF05D0892337F5EF0037C8F8 /* NASA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF05D08C2337F5EF0037C8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,7 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF5A0BAC127AB61F6444E87A /* Pods_NASATests.framework in Frameworks */,
+				F9027154D53AFFAB0D68BB27 /* Pods_NASA_NASATests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF886FE32353830100DFB719 /* APOD.framework in Frameworks */,
-				751C87066064FD2B77714F55 /* Pods_APODTests.framework in Frameworks */,
+				FA2ECD2AA7DDF520B5E47374 /* Pods_APOD_APODTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF353221234CB08E00FF7204 /* Core.framework in Frameworks */,
-				EA0D10475353F3E80E95088C /* Pods_CoreTests.framework in Frameworks */,
+				30238DD13C5B4878A2C0FB89 /* Pods_Core_CoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +251,12 @@
 				C77FA45D180EEAAAD8676B86 /* Pods-NASA.release.xcconfig */,
 				4BA8A6FB7A0CBDE5F22F729A /* Pods-NASATests.debug.xcconfig */,
 				D88CA120661789CB9BBCB20B /* Pods-NASATests.release.xcconfig */,
+				24DB8D18AFC564E999A08E4B /* Pods-APOD-APODTests.debug.xcconfig */,
+				EE5CDBFB30A6DDA69F1BC8D2 /* Pods-APOD-APODTests.release.xcconfig */,
+				D43AF863521E0D4C8CEED3AD /* Pods-Core-CoreTests.debug.xcconfig */,
+				CA12B8A90DDEA0EF681B506B /* Pods-Core-CoreTests.release.xcconfig */,
+				8E12B9A5AC1237D800B6E59B /* Pods-NASA-NASATests.debug.xcconfig */,
+				4CA686150AA4334C9A66B7A6 /* Pods-NASA-NASATests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -350,9 +362,9 @@
 		FF2F652A23412EBB00FBF8C2 /* APODTests */ = {
 			isa = PBXGroup;
 			children = (
+				FF64A1E323535A740016E544 /* View */,
 				FF6EF80C235643AD00AD2D7F /* System */,
 				FF886FCC2353688D00DFB719 /* Service */,
-				FF64A1E323535A740016E544 /* View */,
 				FF2F652D23412EBB00FBF8C2 /* Info.plist */,
 			);
 			path = APODTests;
@@ -362,11 +374,11 @@
 			isa = PBXGroup;
 			children = (
 				3EA64CE8E7F84A75FB5484A5 /* Pods_APOD.framework */,
-				1E5D25A064C37BC0B46B8F83 /* Pods_APODTests.framework */,
 				732E7E8B040428438EB05B82 /* Pods_Core.framework */,
-				F15C4D6B5B53918B9B9C0906 /* Pods_CoreTests.framework */,
 				09845BF909738A30A0FA1E54 /* Pods_NASA.framework */,
-				972EEAAE159A7AD17EE30D60 /* Pods_NASATests.framework */,
+				55E41E57F1804866A7E104DC /* Pods_APOD_APODTests.framework */,
+				A3BD4873C384BF9AC775CBEA /* Pods_Core_CoreTests.framework */,
+				966D47A0817226E636BDB0AA /* Pods_NASA_NASATests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -682,6 +694,7 @@
 					};
 					FF35321F234CB08E00FF7204 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -782,7 +795,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-APODTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-APOD-APODTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -804,7 +817,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CoreTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Core-CoreTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -839,15 +852,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-APODTests/Pods-APODTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-APOD-APODTests/Pods-APOD-APODTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-APODTests/Pods-APODTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-APOD-APODTests/Pods-APOD-APODTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-APODTests/Pods-APODTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-APOD-APODTests/Pods-APOD-APODTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		483537FEA97A6DB7DE0F9C95 /* [CP] Embed Pods Frameworks */ = {
@@ -895,15 +908,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoreTests/Pods-CoreTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Core-CoreTests/Pods-Core-CoreTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoreTests/Pods-CoreTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Core-CoreTests/Pods-Core-CoreTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoreTests/Pods-CoreTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Core-CoreTests/Pods-Core-CoreTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7045A89C1F5E9FAF7D308E20 /* [CP] Embed Pods Frameworks */ = {
@@ -912,15 +925,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NASATests/Pods-NASATests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NASA-NASATests/Pods-NASA-NASATests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NASATests/Pods-NASATests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NASA-NASATests/Pods-NASA-NASATests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NASATests/Pods-NASATests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NASA-NASATests/Pods-NASA-NASATests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		743C2320F040D2C8076C6D13 /* [CP] Check Pods Manifest.lock */ = {
@@ -960,7 +973,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NASATests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-NASA-NASATests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1245,7 +1258,7 @@
 		};
 		FF05D0B72337F5EF0037C8F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BA8A6FB7A0CBDE5F22F729A /* Pods-NASATests.debug.xcconfig */;
+			baseConfigurationReference = 8E12B9A5AC1237D800B6E59B /* Pods-NASA-NASATests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1267,7 +1280,7 @@
 		};
 		FF05D0B82337F5EF0037C8F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D88CA120661789CB9BBCB20B /* Pods-NASATests.release.xcconfig */;
+			baseConfigurationReference = 4CA686150AA4334C9A66B7A6 /* Pods-NASA-NASATests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1383,7 +1396,7 @@
 		};
 		FF2F653823412EBB00FBF8C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F7B52271D879B014526B2A6 /* Pods-APODTests.debug.xcconfig */;
+			baseConfigurationReference = 24DB8D18AFC564E999A08E4B /* Pods-APOD-APODTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1405,7 +1418,7 @@
 		};
 		FF2F653923412EBB00FBF8C2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B33224A079701452E9CC3FA /* Pods-APODTests.release.xcconfig */;
+			baseConfigurationReference = EE5CDBFB30A6DDA69F1BC8D2 /* Pods-APOD-APODTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1489,8 +1502,9 @@
 		};
 		FF35322D234CB08E00FF7204 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21917B0510B46BF24AB377B5 /* Pods-CoreTests.debug.xcconfig */;
+			baseConfigurationReference = D43AF863521E0D4C8CEED3AD /* Pods-Core-CoreTests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TA68U55HHH;
 				INFOPLIST_FILE = CoreTests/Info.plist;
@@ -1501,6 +1515,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dvs.CoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1508,8 +1523,9 @@
 		};
 		FF35322E234CB08E00FF7204 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55C44328BA25D205770FEA05 /* Pods-CoreTests.release.xcconfig */;
+			baseConfigurationReference = CA12B8A90DDEA0EF681B506B /* Pods-Core-CoreTests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TA68U55HHH;
 				INFOPLIST_FILE = CoreTests/Info.plist;
